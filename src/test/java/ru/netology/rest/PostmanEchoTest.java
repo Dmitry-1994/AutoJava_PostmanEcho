@@ -9,12 +9,12 @@ public class PostmanEchoTest {
     void shouldReturnData() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("Меня зовут Саша") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("I am Sacha") // отправляемые данные (заголовки и query можно выставлять аналогично)
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Меня зовут Дима"))
+                .body("data", equalTo("I am Dima"))
         ;
     }
 
